@@ -5,7 +5,7 @@ security:
             memory:
                 users:
                     nicolas:
-                        password: $2y$12$Csi221V135YQn.RUzOtw6eewmLVdtqQctkFCxg9WxPGyXNjfYgTOa
+                        password: '%app.password%'
                         roles: 'ROLE_ADMIN'
 
     encoders:

@@ -8,6 +8,7 @@ parameters:
     app.dir.pictures: '%kernel.project_dir%/public/uploads/pictures'
     app.mail.from: '%env(MAILER_FROM)%'
     app.mail.to: '%env(MAILER_TO)%'
+    app.password: '%env(PASSWORD)%'
 
 services:
     # default configuration for services in *this* file
