@@ -97,7 +97,6 @@ class Project
         $this->description = $description;
 
         return $this;
-
     }
 
     public function getLink(): ?string
@@ -110,7 +109,6 @@ class Project
         $this->link = $link;
 
         return $this;
-
     }
 
     /**

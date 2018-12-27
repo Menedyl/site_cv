@@ -80,7 +80,6 @@ class Picture
         $this->alt = $alt;
 
         return $this;
-
     }
 
     public function getUrl(): ?string
@@ -93,7 +92,6 @@ class Picture
         $this->url = $url;
 
         return $this;
-
     }
 
     public function getProject(): ?Project
@@ -106,7 +104,6 @@ class Picture
         $this->project = $project;
 
         return $this;
-
     }
 
     public function getFile(): ?File
@@ -119,7 +116,6 @@ class Picture
         $this->file = $file;
 
         return $this;
-
     }
 
 

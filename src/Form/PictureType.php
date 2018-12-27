@@ -17,7 +17,7 @@ class PictureType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => false
             ])
-            ->add('file', FileType::class,[
+            ->add('file', FileType::class, [
                 'label' => false
             ]);
     }
