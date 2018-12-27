@@ -1,0 +1,167 @@
+{% extends '_layout.html.twig' %}
+
+{% block title 'Accueil' %}
+
+{% block body %}
+    <div class="container-fluid m-2">
+
+        <div class="row">
+
+            <div class="col-md-4 order-2 order-md-1 col- border border-darkcyan rounded h-25">
+
+                <h3 class="font-weight-bold font-italic half-border-cyan mt-3">
+                    Languages
+                </h3>
+
+                <div class="row d-flex justify-content-around mt-3">
+                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                        <p class="font-weight-bold m-0">
+                            PHP
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/php_logo.svg") }}" alt="logo PHP">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                        <p class="font-weight-bold m-0">
+                            HTML
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/html5_logo.svg") }}" alt="logo HTML 5">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                        <p class="font-weight-bold m-0">
+                            CSS
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/css3_logo.svg") }}" alt="logo CSS 3">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                        <p class="font-weight-bold m-0">
+                            JS
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/js_logo.svg") }}" alt="logo Java Script">
+                    </div>
+                </div>
+
+                <h3 class="font-weight-bold font-italic half-border-cyan">
+                    Frameworks/ Librairies
+                </h3>
+
+                <div class="row d-flex justify-content-around mt-3">
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            Symfony
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/symfony_logo.svg") }}" alt="logo Symfony">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            Bootstrap
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/bootstrap_logo.svg") }}" alt="logo Bootstrap">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            JQuery
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/jquery_logo.svg") }}" alt="logo Git">
+                    </div>
+                </div>
+
+                <h3 class="font-weight-bold font-italic half-border-cyan mt-4">
+                    Outils
+                </h3>
+
+                <div class="row d-flex justify-content-around mt-3">
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            Editeur
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/phpstorm_logo.png") }}" alt="logo PHPStorm">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            OS
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/ubuntu_logo.svg") }}" alt="logo Git">
+                    </div>
+
+                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                        <p class="font-weight-bold m-0">
+                            Versioning
+                        </p>
+                        <img class="img-fluid h-50" src="{{ asset("img/git_logo.svg") }}" alt="logo Git">
+                    </div>
+                </div>
+            </div>
+
+            <main class="container col-md-8 order-1 order-md-2 mb-4">
+                <div class="text-center">
+                    <h1 class="text-left half-border-cyan">
+                        Nicolas BOSTJANCIC
+                    </h1>
+
+                    <h4>
+                        Spécialisé dans le langage PHP et l'utilisation de Symfony
+                    </h4>
+                </div>
+
+                <p class="text-center font-weight-bold font-italic lead my-5">
+                    Vous souhaitez avoir un site internet personnalisé que vous pourrez administrer vous-même
+                    facilement ?
+                    <br>
+                    Ne cherchez plus !
+                </p>
+
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12 col-xl-2 d-flex">
+                            <h5 class="align-self-center half-border-cyan font-weight-bold font-italic">
+                                Bienvenue !
+                            </h5>
+                        </div>
+
+                        <div class="col">
+                            <p>
+                                Si vous me lisez, c'est que vous avez le projet de créer un site web.
+                                Que vous aillez une idée précise ou une vague idée du type de site que vous
+                                souhaitez, je suis en mesure de répondre à votre besoin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-2 d-flex">
+                            <h5 class="align-self-center half-border-cyan font-weight-bold font-italic">
+                                Présentation
+                            </h5>
+                        </div>
+
+                        <div class="col">
+                            <p>
+                                Issue d'une formation de Développeur d'Application Web spécialisé dans le langage
+                                PHP et l'utilisation du framework Symfony,
+                                je vous accompagne dans l'élaboration de votre projet et m'engage
+                                à le réaliser dans le cadre d'un cahier des charges définis ensemble.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center font-italic mt-5">
+                    Rendez-vous dans la section <a href="{{ path('project_list') }}">"Mes projets"</a> pour avoir un
+                    aperçu
+                    de mes
+                    différentes réalisations !
+                </p>
+            </main>
+
+        </div>
+    </div>
+
+{% endblock %}

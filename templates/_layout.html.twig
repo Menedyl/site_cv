@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+          content="Développeur d'Application Web freelance spécialisé dans le langage PHP et l'utilisation du framework Symfony">
+    <title>
+        {% block title %}{% endblock %}
+        - Développeur PHP
+    </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('open-iconic/font/css/open-iconic-bootstrap.css') }}">
+    <link href="{{ asset('build/layout.css') }}" rel="stylesheet" type="text/css">
+
+    {% block stylesheet %}{% endblock %}
+
+</head>
+
+
+<body class="container-fluid">
+<header class="row px-3 pt-1">
+    <div class="col-12 col-md-6">
+        <h1 class="half-border-cyan">Développeur d'Application Web</h1>
+    </div>
+
+    <nav class="col-12 col-md-6 d-flex align-self-end justify-content-center">
+        <ul class="text-center list-unstyled list-inline h3">
+            <li class="list-inline-item ">
+                <a href="{{ path('home') }}"
+                   class="{% if current_page is defined and current_page == 'home' %}active{% endif %}">
+                    Accueil
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{{ path('project_list') }}"
+                   class="{% if current_page is defined and current_page == 'project_list' %}active{% endif %}">
+                    Mes projets
+                </a>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="list-inline-item">
+                    <a href="{{ path('project_add') }}"
+                       class="{% if current_page is defined and current_page == 'project_add' %}active{% endif %}">
+                        Ajouter un projet
+                    </a>
+                </li>
+            {% endif %}
+            <li class="list-inline-item">
+                <a href="{{ path('contact') }}"
+                   class="{% if current_page is defined and current_page == 'contact' %}active{% endif %}">
+                    Me contacter
+                </a>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="list-inline-item">
+                    <a href="{{ path('logout') }}">Déconnexion</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+{% block body %}
+{% endblock %}
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>

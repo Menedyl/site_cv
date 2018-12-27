@@ -1,0 +1,47 @@
+a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+.active {
+    color: cadetblue;
+}
+
+hr {
+    border: darkcyan 0.15em;
+    border-bottom-style: solid;
+}
+
+.half-border-cyan {
+    padding-left: 0.1em;
+    border: 0.3em cyan;
+    border-style: none none ridge ridge;
+    border-radius: 0.8em 0 50% 0;
+    display: inline-block;
+}
+
+.border-darkcyan {
+    border-color: darkcyan !important;
+}
+
+.btn-darkcyan {
+    background-color: darkcyan;
+    color: white;
+}
+
+.btn-darkcyan:hover {
+    background: cyan;
+}
+
+.darkcyan {
+    color: darkcyan;
+}
+
+header > div > h1 {
+    font-size: 3em;
+}

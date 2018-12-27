@@ -1,0 +1,21 @@
+{% extends '_layout.html.twig' %}
+
+{% block stylesheet %}
+    <link href="{{ asset('build/project_form.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block title 'Ajouter un projet' %}
+
+{% block body %}
+
+    <main class="container mb-5">
+
+        {{ include ('project/_form.html.twig', {legend : 'Créer un projet'}) }}
+
+    </main>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/project_form.js') }}"></script>
+{% endblock %}

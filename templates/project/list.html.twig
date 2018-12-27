@@ -1,0 +1,42 @@
+{% extends '_layout.html.twig' %}
+
+{% block title 'Portfolio' %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="d-flex justify-content-center">
+            <h2 class="mb-5 half-border-cyan">
+                Portfolio
+            </h2>
+        </div>
+
+        {% for message in app.flashes('success') %}
+            <div class="flash_info text-center text-success">
+                <p>{{ message }}</p>
+            </div>
+        {% endfor %}
+
+        <main class="mb-5">
+            <div class="row d-flex justify-content-around">
+
+                {% for project in projects %}
+                    <article class="col-md-4 text-center">
+                        <h4>
+                            <a href="{{ path('project_show', {'slug' : project.slug ,'id' : project.id }) }}">{{ project.name }}</a>
+                        </h4>
+
+                        <img class="img-thumbnail"
+                             src="{{ asset('uploads/pictures/' ~ project.pictures.first.url) }}"
+                             alt="{{ project.pictures.first.alt }}">
+
+                        <p class="font-italic">
+                            Lien du site : <a href="{{ project.link }}">{{ project.link }}</a>
+                        </p>
+                    </article>
+                {% endfor %}
+
+            </div>
+        </main>
+    </div>
+{% endblock %}

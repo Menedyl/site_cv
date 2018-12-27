@@ -1,0 +1,33 @@
+<div id="carousel_pictures" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+
+        {% for picture in project.pictures %}
+            <li data-target="#carousel_pictures"
+                data-slide-to="{{ loop.index0 }}"
+                class="oi oi-media-record {% if loop.index0 == 0 %}active{% endif %}">
+            </li>
+        {% endfor %}
+
+    </ol>
+
+    <div class="carousel-inner ">
+
+        {% for picture in project.pictures %}
+            <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %} ">
+                <img class="img-fluid" src="{{ asset('uploads/pictures/' ~ picture.url) }}" alt="{{ picture.alt }}">
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <a class="carousel_control carousel-control-prev" href="#carousel_pictures" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel_control carousel-control-next" href="#carousel_pictures" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

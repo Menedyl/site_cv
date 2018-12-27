@@ -1,0 +1,13 @@
+textarea{
+    height: 350px !important;
+}
+
+#pictures > div{
+    margin: 0 0 1.5em 0;
+}
+
+#pictures input, .delete{
+    width: 100%;
+}
+
+

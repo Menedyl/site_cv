@@ -1,0 +1,56 @@
+{% extends '_layout.html.twig' %}
+
+{% block title 'Contact' %}
+
+{% block body %}
+    <div class="container mb-5">
+        <div class="d-flex justify-content-center mb-3">
+            <h2 class="half-border-cyan">
+                Me contacter
+            </h2>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <p>
+                Remplissez ce formulaire pour me contacter ou pour me posez vos questions.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            {{ form_start(form) }}
+            <fieldset class="border border-darkcyan rounded p-3">
+
+                {{ form_errors(form) }}
+
+                <div class="form-group">
+                    {{ form_label(form.name, 'Votre nom:') }}
+                    {{ form_errors(form.name) }}
+                    {{ form_widget(form.name, {'attr' : {'class' : 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.mail, 'Votre e-mail:') }}
+                    {{ form_errors(form.mail) }}
+                    {{ form_widget(form.mail, {'attr' : {'class' : 'form-control'}}) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.content, 'Contenu:') }}
+                    {{ form_errors(form.content) }}
+                    {{ form_widget(form.content, {'attr' : {'class' : 'form-control'}}) }}
+                </div>
+
+                <button type="submit" class="btn btn-darkcyan">Envoyer</button>
+
+            </fieldset>
+
+            {{ form_end(form) }}
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

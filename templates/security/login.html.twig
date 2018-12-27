@@ -1,0 +1,42 @@
+{% extends '_layout.html.twig' %}
+
+{% block title 'Se connecter' %}
+
+{% block body %}
+    <div class="container">
+
+        {% if error %}
+            <div class="d-flex justify-content-center text-danger my-4">
+                <span class="p-2">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+                </span>
+            </div>
+        {% endif %}
+
+        <form action="{{ path('login') }}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="username">
+                    Nom d'utilisateur:
+                </label>
+
+                <input id="username" class="form-control" type="text" name="_username" value="{{ last_username }}">
+            </div>
+
+            <div class="form-group">
+                <label for="password">
+                    Mot de passe:
+                </label>
+
+                <input id="password" class="form-control" type="password" name="_password">
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+            <button class="btn btn-darkcyan" type="submit">
+                Se connecter
+            </button>
+
+        </form>
+
+    </div>
+{% endblock %}

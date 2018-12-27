@@ -1,0 +1,68 @@
+{{ form_start(form) }}
+
+<fieldset class="border border-darkcyan rounded p-3">
+    <legend class="w-auto px-2">{{ legend }}</legend>
+
+    {{ form_errors(form) }}
+
+    <div class="form-group">
+        {{ form_label(form.name, 'Nom du projet:') }}
+        {{ form_errors(form.name) }}
+        {{ form_widget(form.name, {'attr' : {'class' : 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.link, 'Lien du projet:') }}
+        {{ form_errors(form.link) }}
+        {{ form_widget(form.link, {'attr' : {'class' : 'form-control'}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.description, 'Description du projet:') }}
+        {{ form_errors(form.description) }}
+        {{ form_widget(form.description, {'attr' : {'class' : 'form-control'}}) }}
+    </div>
+
+    <hr>
+
+    <h4 class="text-center mb-4">Images</h4>
+
+    <div id="pictures" class="row mb-4 d-flex justify-content-around">
+
+        {% for picture in form.pictures %}
+
+            <div class="col-md-3">
+
+                {{ form_errors(picture.name) }}
+                {{ form_widget(picture.name) }}
+
+                {{ form_errors(picture.file) }}
+                {{ form_widget(picture.file, {'attr' : {'disabled': 'true', 'hidden' : 'true'}}) }}
+
+                <img src="{{ asset('uploads/pictures/' ~ pictures.get(loop.index0).url) }}"
+                     alt="{{ pictures.get(loop.index0).alt }}" class="img-thumbnail">
+
+                <button class="btn btn-danger delete" type="button">
+                    Supprimer
+                </button>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    <button id="add_picture" class="btn btn-darkcyan" type="button">
+        Ajouter
+    </button>
+
+
+    <button class="btn btn-darkcyan float-right" type="submit">
+        Valider
+    </button>
+
+    <div id="picture_prototype" data-prototype="{{ form_widget(form.pictures.vars.prototype)|e('html_attr') }}"></div>
+
+    {{ form_end(form) }}
+
+
+</fieldset>

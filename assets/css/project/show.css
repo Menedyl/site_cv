@@ -1,0 +1,15 @@
+.carousel-indicators li {
+    width: 1.2em;
+    height: 1.2em;
+    border: black solid thin;
+    border-radius: 1em;
+    background: cadetblue;
+}
+
+.carousel_control {
+    background: rgba(215, 215, 215, 0.4);
+}
+
+.carousel_control:hover {
+    background: rgba(135, 135, 135, 0.4);
+}
