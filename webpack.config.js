@@ -18,6 +18,7 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     .addStyleEntry('layout', './assets/css/layout.css')
+    .addStyleEntry('home', './assets/css/home.css')
     .addEntry('project_form', './assets/js/project/form.js')
     .addStyleEntry('project_show', './assets/css/project/show.css')
 
