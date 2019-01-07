@@ -2,6 +2,10 @@
 
 {% block title 'Accueil' %}
 
+{% block stylesheet %}
+    <link href="{{ asset('build/home.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block body %}
     <div class="container-fluid m-2">
 
@@ -14,59 +18,59 @@
                 </h3>
 
                 <div class="row d-flex justify-content-around mt-3">
-                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                    <div class="col-3 col-md-6 col-lg-3 text-center my-2">
                         <p class="font-weight-bold m-0">
                             PHP
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/php_logo.svg") }}" alt="logo PHP">
+                        <img class="logo" src="{{ asset("img/logo/php.png") }}" alt="PHP">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                    <div class="col-3 col-md-6 col-lg-3 text-center my-2">
                         <p class="font-weight-bold m-0">
                             HTML
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/html5_logo.svg") }}" alt="logo HTML 5">
+                        <img class="logo" src="{{ asset("img/logo/html.png") }}" alt="HTML 5">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                    <div class="col-3 col-md-6 col-lg-3 text-center my-2">
                         <p class="font-weight-bold m-0">
                             CSS
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/css3_logo.svg") }}" alt="logo CSS 3">
+                        <img class="logo" src="{{ asset("img/logo/css.png") }}" alt="CSS 3">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3 text-center">
+                    <div class="col-3 col-md-6 col-lg-3 text-center my-2">
                         <p class="font-weight-bold m-0">
                             JS
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/js_logo.svg") }}" alt="logo Java Script">
+                        <img class="logo" src="{{ asset("img/logo/js.png") }}" alt="Java Script">
                     </div>
                 </div>
 
-                <h3 class="font-weight-bold font-italic half-border-cyan">
+                <h3 class="font-weight-bold font-italic half-border-cyan mt-3">
                     Frameworks/ Librairies
                 </h3>
 
                 <div class="row d-flex justify-content-around mt-3">
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             Symfony
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/symfony_logo.svg") }}" alt="logo Symfony">
+                        <img class="logo_small" src="{{ asset("img/logo/symfony.png") }}" alt="Symfony">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             Bootstrap
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/bootstrap_logo.svg") }}" alt="logo Bootstrap">
+                        <img class="logo_small" src="{{ asset("img/logo/bootstrap.png") }}" alt="Bootstrap">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             JQuery
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/jquery_logo.svg") }}" alt="logo Git">
+                        <img class="logo" src="{{ asset("img/logo/jquery.png") }}" alt="Git">
                     </div>
                 </div>
 
@@ -74,26 +78,26 @@
                     Outils
                 </h3>
 
-                <div class="row d-flex justify-content-around mt-3">
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                <div class="row d-flex justify-content-around my-3">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             Editeur
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/phpstorm_logo.png") }}" alt="logo PHPStorm">
+                        <img class="logo_small" src="{{ asset("img/logo/phpstorm.png") }}" alt="PHPStorm">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             OS
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/ubuntu_logo.svg") }}" alt="logo Git">
+                        <img class="logo_small" src="{{ asset("img/logo/ubuntu.png") }}" alt="Ubuntu">
                     </div>
 
-                    <div class="col-3 col-md-6 col-lg-3  text-center">
+                    <div class="col-3 col-md-6 col-lg-3  text-center my-2">
                         <p class="font-weight-bold m-0">
                             Versioning
                         </p>
-                        <img class="img-fluid h-50" src="{{ asset("img/git_logo.svg") }}" alt="logo Git">
+                        <img class="logo" src="{{ asset("img/logo/git.png") }}" alt="Git">
                     </div>
                 </div>
             </div>
@@ -120,7 +124,7 @@
                     <div class="row mt-5">
                         <div class="col-lg-12 col-xl-2 d-flex">
                             <h5 class="align-self-center half-border-cyan font-weight-bold font-italic">
-                                Bienvenue !
+                                Bienvenue
                             </h5>
                         </div>
 
