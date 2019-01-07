@@ -25,36 +25,7 @@ class ProjectRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('p')
             ->orderBy('p.createAt', 'DESC')
             ->getQuery()
-            ->getResult()
-            ;
+            ->getResult();
     }
 
-//    /**
-//     * @return project[] Returns an array of project objects
-//     */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?project
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
