@@ -34,14 +34,14 @@ class ProjectFixtures extends Fixture
 
                 $picture->setName(($y == 0) ? 'Accueil' : $y)
                     ->setFile(new File(($y == 0) ?
-                            (!copy(
-                                self::PATH . '01.png',
-                                self::PATH . '01_copy.png'
-                            ) ?: self::PATH . '01_copy.png') :
-                            (!copy(
-                                self::PATH . '02.png',
-                                self::PATH . '02_copy.png'
-                            ) ?: self::PATH . '02_copy.png')));
+                        (!copy(
+                            self::PATH . '01.png',
+                            self::PATH . '01_copy.png'
+                        ) ?: self::PATH . '01_copy.png') :
+                        (!copy(
+                            self::PATH . '02.png',
+                            self::PATH . '02_copy.png'
+                        ) ?: self::PATH . '02_copy.png')));
 
                 $project->addPicture($picture);
             }

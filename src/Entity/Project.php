@@ -58,7 +58,6 @@ class Project
     private $createAt;
 
 
-   
     public function __construct()
     {
         $this->createAt = new \DateTime();
@@ -131,7 +130,6 @@ class Project
     {
         if ($this->pictures->contains($picture)) {
             $this->pictures->removeElement($picture);
-            // set the owning side to null (unless already changed)
             if ($picture->getProject() === $this) {
                 $picture->setProject(null);
             }
