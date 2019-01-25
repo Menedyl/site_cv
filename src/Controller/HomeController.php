@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +14,7 @@ class HomeController extends AbstractController
 
     /**
      * @Route("/", name="home")
+     * @Cache(expires="tomorrow", public=true, maxage="21600", smaxage="21600", vary={"User-Agent", "Cookie", "Accept-Encoding"})
      */
     public function home(): Response
     {
@@ -20,6 +22,7 @@ class HomeController extends AbstractController
             'current_page' => 'home'
         ]);
     }
+
 
     /**
      * @Route("/contact", name="contact")
@@ -46,6 +49,7 @@ class HomeController extends AbstractController
 
             return $this->redirectToRoute('home');
         }
+
         return $this->render('contact.html.twig', [
             'form' => $form->createView(),
             'current_page' => 'contact'

@@ -8,6 +8,7 @@
         "ext-iconv": "*",
         "cocur/slugify": "^3.1",
         "sensio/framework-extra-bundle": "^5.2",
+        "symfony/apache-pack": "^1.0",
         "symfony/asset": "*",
         "symfony/console": "*",
         "symfony/dotenv": "*",
