@@ -6,6 +6,7 @@ use App\Entity\Project;
 use App\Form\ProjectType;
 use App\Service\ProjectManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,6 +18,7 @@ class ProjectController extends AbstractController
 
     /**
      * @Route("/projects/{slug}-{id}", name="project_show", requirements={"slug": "[a-z0-9\-]*"})
+     * @Cache(expires="tomorrow", public=true, maxage="21600", smaxage="21600", vary={"User-Agent", "Cookie", "Accept-Encoding"})
      *
      * @param Project $project
      */
@@ -119,6 +121,7 @@ class ProjectController extends AbstractController
 
     /**
      * @Route("/projects", name="project_list")
+     * @Cache(expires="tomorrow", public=true, maxage="21600", smaxage="21600", vary={"User-Agent", "Cookie", "Accept-Encoding"})
      */
     public function list(EntityManagerInterface $em): Response
     {
