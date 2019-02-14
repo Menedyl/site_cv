@@ -32,3 +32,4 @@ yarn-error.log
 ###< squizlabs/php_codesniffer ###
 
 /public/uploads/pictures/
+deploy
